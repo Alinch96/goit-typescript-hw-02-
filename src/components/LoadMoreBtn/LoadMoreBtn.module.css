@@ -1,0 +1,19 @@
+.btn {
+  display: block;
+  color: whitesmoke;
+  font-size: 16px;
+  background-color: rgb(62, 54, 108);
+  transition: background-color 400ms linear, color 400ms linear;
+  outline: transparent;
+  border: 1px solid #181938;
+  border-radius: 6px;
+  padding: 16px 24px;
+  margin: 0 auto;
+}
+
+.btn:hover,
+.btn:focus-visible,
+.btn:active {
+  background-color: rgb(168, 56, 121);
+  color: rgb(28, 28, 28);
+}
