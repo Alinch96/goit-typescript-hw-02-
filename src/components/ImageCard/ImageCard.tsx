@@ -1,7 +1,13 @@
 import { CiHeart, CiUser } from "react-icons/ci";
 import css from "./ImageCard.module.css";
+import { Photo } from "../../types/photo";
 
-const ImageCard = ({ image, onImageClick }) => {
+interface Props {
+  image: Photo;
+  onImageClick: () => void;
+}
+
+const ImageCard: React.FC<Props> = ({ image, onImageClick }) => {
   return (
     <div className={css.imgContainer}>
       <img

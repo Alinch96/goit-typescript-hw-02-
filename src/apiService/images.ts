@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import { FetchGalleryPhotosResponse } from '../types/photo';
 
 const ACCESS_KEY = '1YqwRSD9TCxQAVman5CaV3MDNhP0VoVOxK1QKZW10Fk';
 const axios = Axios.create({
@@ -13,14 +14,14 @@ axios.defaults.params = {
   orientation: 'landscape',
 };
 
-const fetchImages = async (query, page) => {
-  const { data } = await axios.get('search/photos', {
+const fetchImages = async (query:string, page:number): Promise<FetchGalleryPhotosResponse> => {
+  const response= await axios.get('search/photos', {
     params: {
       query,
       page,
     },
   });
-
+  const data: FetchGalleryPhotosResponse = response.data;
   return data;
 };
 
