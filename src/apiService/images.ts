@@ -1,12 +1,12 @@
 import Axios from 'axios';
 import { FetchGalleryPhotosResponse } from '../types/photo';
 
-const ACCESS_KEY = '1YqwRSD9TCxQAVman5CaV3MDNhP0VoVOxK1QKZW10Fk';
+const ACCESS_KEY: string = '1YqwRSD9TCxQAVman5CaV3MDNhP0VoVOxK1QKZW10Fk';
 const axios = Axios.create({
   baseURL: 'https://api.unsplash.com/',
 });
 
-axios.defaults.headers = {
+axios.defaults.headers.common = {
   Authorization: `Client-ID ${ACCESS_KEY}`,
 };
 axios.defaults.params = {
